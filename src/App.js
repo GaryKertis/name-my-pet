@@ -6,11 +6,24 @@ const ids = [1, 2, 3];
 class App extends Component {
   constructor(props) {
     super(props);
+    console.log("App.constructor");
     this.getNext = this.getNext.bind(this);
     this.getPrevious = this.getPrevious.bind(this);
     this.state = {
       current: 0
     }
+  }
+
+  componentDidMount() {
+    console.log('App.componentDidMount');
+  }
+
+  componentDidUpdate() {
+    console.log('App.componentDidUpdate');
+  }
+
+  componentWillUnmount() {
+    console.log('App.componentWillUnmount');
   }
 
   getNext() {
@@ -36,6 +49,7 @@ class App extends Component {
   }
 
   render() {
+    console.log("App.render");
     const { current } = this.state;
     const id = ids[current];
     return (
@@ -44,6 +58,7 @@ class App extends Component {
         <button onClick={() => this.getPrevious()}>
           Previous
         </button>
+        {/*Why are we using key here?*/}
         <CustomPetName id={id} key={current}/>
         <button onClick={() => this.getNext()}>
           Next

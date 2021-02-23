@@ -5,6 +5,7 @@ import { api, update } from "../utils/api";
 class CustomPetName extends Component {
   constructor(props) {
     super(props)
+    console.log(`${this.props.id}-CustomPetName.constructor`);
     this.state = {
       isFetching: true
     };
@@ -12,6 +13,7 @@ class CustomPetName extends Component {
   }
 
   componentDidMount() {
+    console.log(`${this.props.id}-CustomPetName.componentDidMount`);
     const { isFetching } = this.state;
     const { id } = this.props;
     if (isFetching) {
@@ -19,6 +21,14 @@ class CustomPetName extends Component {
         this.setState({ isFetching: false, pet });
       });
     }
+  }
+
+  componentDidUpdate() {
+    console.log(`${this.props.id}-CustomPetName.componentDidUpdate`);
+  }
+
+  componentWillUnmount() {
+    console.log(`${this.props.id}-CustomPetName.componentWillUnmount`);
   }
 
   handleChange(event) {
@@ -30,7 +40,7 @@ class CustomPetName extends Component {
   }
 
   render() {
-
+    console.log(`${this.props.id}-CustomPetName.render`);
     const { isFetching, pet } = this.state;
     let page = (<div className="loader"></div>);
     if (!isFetching) {
