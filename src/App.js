@@ -1,12 +1,12 @@
-import PetName from './components/PetName';
+import CustomPetName from './components/CustomPetName';
 
 function App() {
   return (
     <div>
       <h1>My Pets</h1>
-      <PetName name={"Babs"} pet={"baboon"} />
-      <PetName name={"Bob"} pet={"bobcat"} />
-      <PetName name={"Bernie"} pet={"bernie"} />
+      <CustomPetName pet={"baboon"} />
+      <CustomPetName pet={"bobcat"} />
+      <CustomPetName pet={"bernie"} />
     </div>
   );
 }

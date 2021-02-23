@@ -1,8 +1,11 @@
 body {
   text-align: center;
 }
-.pet_name {
-  margin: 10px;
+.custom_pet {
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid black;
+  max-width: 200px;
 }
 .pet_name img {
   width: 200px;
