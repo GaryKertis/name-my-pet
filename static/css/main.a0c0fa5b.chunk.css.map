@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,KACE,iBACF,CACA,UACE,WACF,CACA,cACE,WACF","file":"main.a0c0fa5b.chunk.css","sourcesContent":[".App {\n  text-align: center;\n}\n.pet_name {\n  margin: 10px;\n}\n.pet_name img {\n  width: 200px;\n}"]}
