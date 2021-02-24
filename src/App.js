@@ -58,8 +58,7 @@ class App extends Component {
         <button onClick={() => this.getPrevious()}>
           Previous
         </button>
-        {/*Why are we using key here?*/}
-        <CustomPetName id={id} key={current}/>
+        <CustomPetName id={id} />
         <button onClick={() => this.getNext()}>
           Next
         </button>

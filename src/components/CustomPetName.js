@@ -23,8 +23,15 @@ class CustomPetName extends Component {
     }
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     console.log(`${this.props.id}-CustomPetName.componentDidUpdate`);
+    const { id } = this.props;
+    if (prevProps.id !== id) {
+      this.setState({isFetching: true})
+      api(id).then(pet => {
+        this.setState({ isFetching: false, pet });
+      });
+    }
   }
 
   componentWillUnmount() {
