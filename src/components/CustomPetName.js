@@ -5,9 +5,6 @@ import { api } from "../utils/api";
 class CustomPetName extends Component {
   constructor(props) {
     super(props)
-
-    // Use `api` above to get the data.
-    // the id comes from props. (ex. props.id = 1)
     this.state = {
       pet: {}
     };
@@ -15,6 +12,8 @@ class CustomPetName extends Component {
   }
 
   // Fill this out!!!
+  // Use `api` above to get the data.
+  // the id comes from props. (ex. props.id = 1)
   componentDidMount() {
   }
 
